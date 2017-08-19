@@ -1,0 +1,23 @@
+group 'com.fairyfloss.cassandra.demo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+sourceCompatibility = 1.8
+
+
+repositories {
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+    mavenCentral()
+}
+ext {
+    springbootVersion = '1.5.3.RELEASE'
+    lombokVersion = '1.16.16'
+    datastaxCassandraVersion = '3.3.0'
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile "org.springframework.boot:spring-boot-starter-web:$springbootVersion" //Start
+    compile "org.projectlombok:lombok:$lombokVersion"
+    compile "com.datastax.cassandra:cassandra-driver-core:$datastaxCassandraVersion"
+    compile "com.datastax.cassandra:cassandra-driver-mapping:$datastaxCassandraVersion"
+}
