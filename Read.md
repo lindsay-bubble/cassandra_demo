@@ -1,3 +1,0 @@
-# Cassandra demo
-
-## goods Test
